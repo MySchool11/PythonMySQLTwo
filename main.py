@@ -31,3 +31,8 @@ if __name__ == "__main__":                      # just a way of confirming the p
 # That last bit needs some clarification. So any .py file can call any other .py file and use it like an imported
 # library. The test "if __name__ == "__main__" prevents this, because if the .py file has been imported into another .py
 # file, then the __name__ variable will not be "__main__" so the connect() function will not run.
+
+# One last consideration is the security aspect. The .ini file being used is in plain text - so can easily be viewed by
+# anyone with a text editor and some simple knowledge - not good. In the real world the information is encrypted by an
+# algorithm then written to the ini. When needed the function opening the .ini will decrypt it first and then use it
+# thus ensuring secure storage of details.
